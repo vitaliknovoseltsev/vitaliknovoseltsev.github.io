@@ -171,7 +171,7 @@ a.button2:active {
 /*	border-color: red;
 	border-style: solid;*/
 	margin-left: 30px;
-	position: absolute;
+	/*position: absolute;*/
 }
 
 .unit img
@@ -230,7 +230,7 @@ a.button2:active {
 }
 #l2
 {
-	margin-top: 800px;
+	margin-top: 700px;
 }
 #l3
 {
