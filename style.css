@@ -134,15 +134,18 @@ a.button2:active {
 #happy
 {
 	width: 100%;
-	height: 3600px;
+	/*height: 3600px;*/
 	background: white;
 	display: none;
+	position: relative;
 	margin-top: 50px;
 }
 .cont
 {
-	width: 1330px;
-	height: 3500px;
+	width: 100%;
+	padding: 10px;
+	overflow: hidden;
+	/*height: 3500px;*/
 /*	border-color: black;
 	border-style: solid;*/
 }
@@ -167,11 +170,16 @@ a.button2:active {
 }
 .unit
 {
-	width: 610px;
+	width: 45%;
 /*	border-color: red;
 	border-style: solid;*/
-	margin-left: 30px;
+	float: left;
+	margin: 10px;
+	position: relative;
 	/*position: absolute;*/
+}
+.clear {
+	clear: both;
 }
 
 .unit img
@@ -212,52 +220,11 @@ a.button2:active {
     border-right: 20px solid #DCDCDC;
 
    }
- .left hr
+ hr
  {
- 	margin-left: 20px;
+ float: left;	
+ 	width: 100%;
+ 	margin-top:20px;
  }
- #Ira
- {
- 	margin-top: 20px;
- }
- #parents
- {
- 	margin-top: 20px;
- }
-#l1
-{
-	margin-top: 600px;
-}
-#l2
-{
-	margin-top: 700px;
-}
-#l3
-{
-	margin-top: 250px;
-}
-#Karina
-{
-	margin-top: 20px;
-}
-#l4
-{
-	margin-top: 1100px;
-}
-#l5
-{
-	margin-top: 1100px;
-}
-#l6
-{
-	margin-top: 700px;
-}
-#l7
-{
-	margin-top: 500px;
-}
-#l8
-{
-	margin-top: 300px;
-}
+
 
