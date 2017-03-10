@@ -2,6 +2,7 @@ body
 {
 	background-color:#9b26af;
 	min-width:1300px;
+	max-width:1300px;
 }
 .main
 {
@@ -55,11 +56,15 @@ body
   padding: .5em 1em calc(.5em + 3px);
   border-radius: 3px;
   background:#00E676;
-  
+  font-family: 'Lobster', cursive;
   transition: 0.2s;
   font-size: 46px;
   color: #616161;
 } 
+a.button2
+{
+	font-family: 'Lobster', cursive;
+}
 a.button7:hover { background: #00C853; }
 a.button7:active {
    background:#00E676;
