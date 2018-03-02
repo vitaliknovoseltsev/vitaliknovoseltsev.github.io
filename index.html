@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Мегафон Гид</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+</head>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		.wrap{
+			overflow: hidden;
+			width: 100%;
+			height: 100vh;
+			position: relative;
+			background: rgb(20,20,21);
+		}
+		.logotype{
+			z-index: 20;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) rotate(90deg);
+			transition: all .5s linear;
+		}
+		.rotate_logo{
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		.logotype img{
+			width: 400px;
+		}
+		.logotype .top{
+			background: rgb(20,20,21);
+		}
+		.logotype .bottom{
+			margin-top: -5px;
+			background: rgb(20,20,21);
+			transition: all .5s linear;
+		}
+		.logotype .margin{
+			margin-top: 250px;
+		}
+		.black{
+			position: absolute;
+			width: 100%;
+			height: 50px;
+			top: -50px;
+			left: 0px;
+			background: rgb(20,20,21);
+
+		}
+		.words{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 400px;
+			transform: translate(-50%, -50%);
+			transition: all .5s linear;
+		}
+		.words img{
+			width: 400px;
+			transition: all .5s linear;
+		}
+		#string_2{
+			margin-top: 20px;
+			opacity: 0;
+		}
+		#string_1{
+			opacity: 0;
+		}
+		.open{
+			opacity: 1 !important;
+		}
+		.hide{
+			position: absolute;
+			height: 55px;
+			width: 100%;
+			left: 0px;
+			bottom: 0px;
+			opacity: 1;
+			background: rgb(20,20,21);
+			transition: all 5s linear;
+		}
+		.right_hide{
+			
+			left: 100%;
+		}
+	</style>
+<body>
+	<section class="wrap">
+		<div class="logotype">
+			<div class="black">
+				
+			</div>
+			<div class="top">
+				<img src="top_img.png">
+			</div>
+			<div class="bottom">
+				<img src="bottom_img.png">
+			</div>
+		</div>
+		<div class="words">
+			<img id="string_1" src="words.png">
+			<img id="string_2" src="string.png">
+			<div class="hide">
+				
+			</div>
+		</div>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		setTimeout(function(){
+			$('.logotype').addClass('rotate_logo');
+			setTimeout(function(){
+				$('.bottom').addClass('margin');
+				$('#string_1').addClass('open');
+				setTimeout(function(){
+					$('#string_2').addClass('open');
+					$('.hide').addClass('right_hide');
+				},500);
+			},600);
+		},1000);
+	</script>
+</body>
+</html>
