@@ -44,7 +44,7 @@
 			opacity: 0;
 		}
 		.logotype img{
-			width: 200px;
+			width: 140px;
 		}
 		.logotype .top{
 			background: rgb(20,20,21);
@@ -55,7 +55,7 @@
 			transition: all .5s linear;
 		}
 		.logotype .margin{
-			margin-top: 130px;
+			margin-top: 90px;
 		}
 		.black{
 			position: absolute;
@@ -70,12 +70,12 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			width: 200px;
+			width: 140px;
 			transform: translate(-50%, -50%);
 			transition: all .5s linear;
 		}
 		.words img{
-			width: 200px;
+			width: 140px;
 			transition: all .5s linear;
 		}
 		#string_2{
@@ -98,9 +98,19 @@
 			background: rgb(20,20,21);
 			transition: all 3s linear;
 		}
+		.hide_word{
+			position: absolute;
+			height: 30px;
+			width: 100%;
+			left: 0px;
+			bottom: -30px;
+			background: rgb(20,20,21);
+		}
 		.right_hide{
-			
 			left: 100%;
+		}
+		.bottom_hide{
+			bottom: -20px;
 		}
 	</style>
 <body>
@@ -114,14 +124,18 @@
 			</div>
 			<div class="bottom">
 				<img src="bottom_img.png">
+				<div class="hide_word">
+				
+			</div>
 			</div>
 		</div>
 		<div class="words">
 			<img id="string_1" src="words.png">
 			<img id="string_2" src="string.png">
 			<div class="hide">
-				
+			
 			</div>
+			
 		</div>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -135,11 +149,12 @@
 					$('#string_2').addClass('open');
 					$('.hide').addClass('right_hide');
 					setTimeout(function(){
-						$('.hide').removeClass('right_hide');
 						setTimeout(function(){
 							$('.bottom').removeClass('margin');
-							$('#string_2').removeClass('open');
 							$('#string_1').removeClass('open');
+							setTimeout(function(){
+								$('#string_2').removeClass('open');
+							},100);
 							setTimeout(function(){
 								$('.logotype').removeClass('rotate_logo');
 								setTimeout(function(){
@@ -147,9 +162,12 @@
 									setTimeout(function(){
 										$('.wrap').addClass('hide_el');
 									},500);
+									setTimeout(function(){
+										$('.wrap').css('display', 'none');
+									},1000);
 								},500);
 							},400);
-						},3300);
+						},500);
 					},3000);
 				},500);
 			},600);
