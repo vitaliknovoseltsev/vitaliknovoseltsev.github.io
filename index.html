@@ -17,13 +17,19 @@
 			margin: 0;
 		}
 		.wrap{
+			position: absolute;
 			overflow: hidden;
+			top: 0px;
+			left: 0px;
 			width: 100%;
+			opacity: 1;
 			height: 100vh;
 			position: relative;
 			background: rgb(20,20,21);
+			transition: all .5s linear;
 		}
 		.logotype{
+			opacity: 1;
 			z-index: 20;
 			position: absolute;
 			left: 50%;
@@ -34,8 +40,11 @@
 		.rotate_logo{
 			transform: translate(-50%, -50%) rotate(0deg);
 		}
+		.hide_el{
+			opacity: 0;
+		}
 		.logotype img{
-			width: 400px;
+			width: 200px;
 		}
 		.logotype .top{
 			background: rgb(20,20,21);
@@ -46,13 +55,13 @@
 			transition: all .5s linear;
 		}
 		.logotype .margin{
-			margin-top: 250px;
+			margin-top: 130px;
 		}
 		.black{
 			position: absolute;
 			width: 100%;
-			height: 50px;
-			top: -50px;
+			height: 60px;
+			top: -60px;
 			left: 0px;
 			background: rgb(20,20,21);
 
@@ -61,16 +70,16 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			width: 400px;
+			width: 200px;
 			transform: translate(-50%, -50%);
 			transition: all .5s linear;
 		}
 		.words img{
-			width: 400px;
+			width: 200px;
 			transition: all .5s linear;
 		}
 		#string_2{
-			margin-top: 20px;
+			margin-top: 5px;
 			opacity: 0;
 		}
 		#string_1{
@@ -81,13 +90,13 @@
 		}
 		.hide{
 			position: absolute;
-			height: 55px;
+			height: 30px;
 			width: 100%;
 			left: 0px;
 			bottom: 0px;
 			opacity: 1;
 			background: rgb(20,20,21);
-			transition: all 5s linear;
+			transition: all 3s linear;
 		}
 		.right_hide{
 			
@@ -125,6 +134,23 @@
 				setTimeout(function(){
 					$('#string_2').addClass('open');
 					$('.hide').addClass('right_hide');
+					setTimeout(function(){
+						$('.hide').removeClass('right_hide');
+						setTimeout(function(){
+							$('.bottom').removeClass('margin');
+							$('#string_2').removeClass('open');
+							$('#string_1').removeClass('open');
+							setTimeout(function(){
+								$('.logotype').removeClass('rotate_logo');
+								setTimeout(function(){
+									$('.logotype').addClass('hide_el');
+									setTimeout(function(){
+										$('.wrap').addClass('hide_el');
+									},500);
+								},500);
+							},400);
+						},3300);
+					},3000);
 				},500);
 			},600);
 		},1000);
