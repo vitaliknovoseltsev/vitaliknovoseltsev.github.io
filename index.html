@@ -81,6 +81,7 @@
 		#string_2{
 			margin-top: 5px;
 			opacity: 0;
+			transition: none !important;
 		}
 		#string_1{
 			opacity: 0;
@@ -154,7 +155,7 @@
 							$('#string_1').removeClass('open');
 							setTimeout(function(){
 								$('#string_2').removeClass('open');
-							},100);
+							},200);
 							setTimeout(function(){
 								$('.logotype').removeClass('rotate_logo');
 								setTimeout(function(){
