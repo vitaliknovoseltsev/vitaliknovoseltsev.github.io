@@ -36,8 +36,8 @@
 #preloader {
   display: block;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-top-color: #fac500;
   -webkit-animation: spin 2s linear infinite;
   /* Chrome, Opera 15+, Safari 5+ */
@@ -180,3 +180,8 @@
 }
 
 </style>
+<script type="text/javascript">
+	$(window).load(function(){
+		$('#preloader-wrapper').fadeOut(500);
+	});
+</script>
