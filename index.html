@@ -1,664 +1,180 @@
-<!DOCTYPE html>
-<html lang="ru">
+<div id="preloader-wrapper">
+	<div class="center">
+		<img src="logo.png">
+		<div id="preloader"></div>
+	</div>
+</div>
+<style type="text/css">
+	#preloader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  user-select: none;
+  pointer-events: none;
+  background-color: #f0f0f0;
+}
+.center {
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+.center img {
+	width: 300px;
+}
+.ring-border, #preloader, #preloader:before, #preloader:after {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+#preloader {
+	margin: 0 auto;
+	margin-top: 30px;
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-top-color: #fac500;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+#preloader:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-top-color: #000;
+  -webkit-animation: spin-reverse 0.7s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin-reverse 0.7s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+#preloader:after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border-top-color: #38ce58;
+  -webkit-animation: spin 1.7s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.7s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@-webkit-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(-360deg);
+    /* IE 9 */
+    transform: rotate(-360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(-360deg);
+    /* IE 9 */
+    transform: rotate(-360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@-moz-keyframes spin-reverse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg);
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(-360deg);
+    /* IE 9 */
+    transform: rotate(-360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
 
-<head>
-
-	<meta charset="utf-8">
-
-	<title></title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="format-detection" content="telephone=no">
-
-
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-	<!-- Шрифты -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-</head>
-
-<body>
-  <header>
-    <div class="container flex">
-      <a href="/" class="logotype">
-        <img src="/img/logo.png" alt="logotype image" />
-      </a>
-      <div class="phone">
-        <div class="phone-number">
-          <span>8 951 323 1111</span>
-        </div>
-        <button class="get-call">заказать звонок</button>
-      </div>
-    </div>
-  </header>
-
-	<section class="video">
-    <div class="container">
-      <video width="400" height="300" autoplay="autoplay" loop="loop">
-        <source src="/video/dom.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-      </video>
-    </div>
-  </section>
-
-  <section class="services">
-    <h2>Наши услуги</h2>
-    <div class="container flex">
-      <div class="service-item" data-form-text="Асфальтирование <br>от 350 руб.кв.м.">
-        <img src="/img/s4.png" alt="" />
-        <h3>Асфальтирование</h3>
-      </div>
-      <div class="service-item" data-form-text="Строительные работы">
-        <img src="/img/s2.png" alt="" />
-        <h3>Строительные работы</h3>
-      </div>
-      <div class="service-item" data-form-text="Кровельные работы">
-        <img src="/img/s1.png" alt="" />
-        <h3>Кровельные работы</h3>
-      </div>
-      <div class="service-item" data-form-text="Благоустройство территорий">
-        <img src="/img/s3.png" alt="" />
-        <h3>Благоустройство территорий</h3>
-      </div>
-    </div>
-  </section>
-
-  <section class="why">
-    <h2>почему нас рекомендуют</h2>
-    <div class="container">
-      <div class="why-row">
-        <div class="why-row_img">
-          <img src="/img/builder.png" alt="" />
-        </div>
-        <article class="why-row_info">
-          <img src="/img/why1.png" alt="" />
-          <p>
-            <span>УралСтройТорг</span> лидер в осуществлении ряда строительных услуг по
-            <span>доступным ценам</span>, поэтому итог работы непременно порадует Вас!
-          </p>
-        </article>
-      </div>
-      <div class="why-row">
-        <article class="why-row_info">
-          <img src="/img/why2.png" alt="" />
-          <p>
-            <span>Компания «УралСтройТорг»</span> готова уже сегодня стать вашим постоянным партнером и
-            <span>ответственным исполнителем</span>!
-          </p>
-        </article>
-        <div class="why-row_img">
-          <img src="/img/ok.png" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="licences">
-    <h2>У нас есть все необходимые лицензии и СРО</h2>
-    <div class="container">
-      <span>Повышенная гарантия на все виды работ! <br> Заключаем договор гарантийноого обслуживания!</span>
-      <div class="licence-images">
-        <div class="licence">
-          <img src="/img/d1.jpg" alt="" />
-        </div>
-        <div class="licence">
-          <img src="/img/d2.jpg" alt="" />
-        </div>
-        <div class="licence">
-          <img src="/img/d3.jpg" alt="" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="works">
-    <h2>несколько примеров наших работ</h2>
-    <div class="container">
-      <div class="work-slider">
-        <div class="work-slider-nav">
-          <div class="work-slider-nav_item active-nav">
-            <span class="work-slider-nav_item__number">
-              01.
-            </span>
-            <span class="work-slider-nav_item__caption">
-              Асфальтирование
-            </span>
-          </div>
-          <div class="work-slider-nav_item">
-            <span class="work-slider-nav_item__number">
-              02.
-            </span>
-            <span class="work-slider-nav_item__caption">
-              Строительные <br>работы
-            </span>
-          </div>
-          <div class="work-slider-nav_item">
-            <span class="work-slider-nav_item__number">
-              03.
-            </span>
-            <span class="work-slider-nav_item__caption">
-              Кровельные <br>работы
-            </span>
-          </div>
-          <div class="work-slider-nav_item">
-            <span class="work-slider-nav_item__number">
-              04.
-            </span>
-            <span class="work-slider-nav_item__caption">
-              Благоустройство <br>территорий
-            </span>
-          </div>
-        </div>
-        <div class="work-slider-wrapper">
-          <div class="work-slider-wrapper_carousel current" id="carousel_1">
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/4/sld1.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Асфальтирование площадки перед торговым комплексом</span>
-                <ul>
-                  <li>г.Челябинск </li>
-                  <li>Площадь: 75 м2</li>
-                  <li>Cтоимость: 26 250 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/4/sld2.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Асфальтирование придомовой территории</span>
-                <ul>
-                  <li>пр. Победы</li>
-                  <li>Площадь: 250 м2</li>
-                  <li>Cтоимость: 87 500 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/4/sld3.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Асфальтирование территории</span>
-                <ul>
-                  <li>Магазин Магнит</li>
-                  <li>Площадь: 100 м2</li>
-                  <li>Cтоимость: 35 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/4/sld4.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Асфальтирование</span>
-                <ul>
-                  <li>Частный дом</li>
-                  <li>Площадь: 150 м2</li>
-                  <li>Cтоимость: 52 500 р.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="work-slider-wrapper_carousel" id="carousel_2">
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld1.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дачный комплекс</span>
-                <ul>
-                  <li>Площадь: 200 м2</li>
-                  <li>Беседка с барбекю, баня 42м2</li>
-                  <li>Cтоимость: 2 100 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld2.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дачный комплекс</span>
-                <ul>
-                  <li>Площадь: 200 м2</li>
-                  <li>Беседка с барбекю, баня 42м2</li>
-                  <li>Cтоимость: 2 100 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld3.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дачный комплекс</span>
-                <ul>
-                  <li>Площадь: 200 м2</li>
-                  <li>Беседка с барбекю, баня 42м2</li>
-                  <li>Cтоимость: 2 100 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld4.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дачный комплекс</span>
-                <ul>
-                  <li>Площадь: 200 м2</li>
-                  <li>Беседка с барбекю, баня 42м2</li>
-                  <li>Cтоимость: 2 100 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld5.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дачный комплекс</span>
-                <ul>
-                  <li>Площадь: 200 м2</li>
-                  <li>Беседка с барбекю, баня 42м2</li>
-                  <li>Cтоимость: 2 100 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld6.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дачный комплекс</span>
-                <ul>
-                  <li>Площадь: 200 м2</li>
-                  <li>Беседка с барбекю, баня 42м2</li>
-                  <li>Cтоимость: 2 100 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld7.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дом с мансардой и эркером</span>
-                <ul>
-                  <li>Площадь: 195 м2</li>
-                  <li>Фундамент: ленточно-монолитный</li>
-                  <li>Стоимость: 2 350 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld8.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дом с мансардой и эркером</span>
-                <ul>
-                  <li>Площадь: 195 м2</li>
-                  <li>Фундамент: ленточно-монолитный</li>
-                  <li>Стоимость: 2 350 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld9.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дом с мансардой и эркером</span>
-                <ul>
-                  <li>Площадь: 195 м2</li>
-                  <li>Фундамент: ленточно-монолитный</li>
-                  <li>Стоимость: 2 350 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld10.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Дом с мансардой и эркером</span>
-                <ul>
-                  <li>Площадь: 195 м2</li>
-                  <li>Фундамент: ленточно-монолитный</li>
-                  <li>Стоимость: 2 350 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld11.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Мансардный дом с цокольным этажом</span>
-                <ul>
-                  <li>Площадь: 294 м2</li>
-                  <li>Фундамент: сборно-монолитный</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld12.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Мансардный дом с цокольным этажом</span>
-                <ul>
-                  <li>Площадь: 294 м2</li>
-                  <li>Фундамент: сборно-монолитный</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld13.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Мансардный дом с цокольным этажом</span>
-                <ul>
-                  <li>Площадь: 294 м2</li>
-                  <li>Фундамент: сборно-монолитный</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/2/sld14.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Мансардный дом с цокольным этажом</span>
-                <ul>
-                  <li>Площадь: 294 м2</li>
-                  <li>Фундамент: сборно-монолитный</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="work-slider-wrapper_carousel" id="carousel_3">
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld1.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>190 кв.метра</li>
-                  <li>срок 3 недели</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld1.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>400 кв.метра</li>
-                  <li>срок 8 недель</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld3.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>210 кв.метра</li>
-                  <li>срок 3 недели</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld4.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>210 кв.метра</li>
-                  <li>срок 3 недели</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld5.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>190 кв.метра</li>
-                  <li>срок 3 недели</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld6.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>130 кв.метров</li>
-                  <li>срок 12 дней</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld7.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>130 кв.метров</li>
-                  <li>срок 12 дней</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld8.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>130 кв.метров</li>
-                  <li>срок 12 дней</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld9.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>130 кв.метров</li>
-                  <li>срок 12 дней</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld10.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>400 кв.метров</li>
-                  <li>срок 8 недель</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld11.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>190 кв.метров</li>
-                  <li>срок 3 недели</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/1/sld12.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Кровельные работы</span>
-                <ul>
-                  <li>400 кв.метров</li>
-                  <li>срок 8 недель</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="work-slider-wrapper_carousel" id="carousel_4">
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/3/sld1.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Благоустройство территории</span>
-                <ul>
-                  <li>Поселок АМ</li>
-                  <li>Площадь: 3170 м2</li>
-                  <li>Cтоимость: 85 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/3/sld2.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Благоустройство территории</span>
-                <ul>
-                  <li>База отдыха Урал</li>
-                  <li>Площадь: 350 м2</li>
-                  <li>Cтоимость: 157 000 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/3/sld3.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Укладка тротуарной плитки</span>
-                <ul>
-                  <li>Поселок Октябрьский</li>
-                  <li>Площадь: 125 м2</li>
-                  <li>Cтоимость: 62 500 р.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="work-slider-wrapper_carousel__slide">
-              <img src="/img/3/sld4.jpg" alt="" />
-              <div class="work-slide-info">
-                <span class="work-slide-info_title">Укладка тротуарной плитки</span>
-                <ul>
-                  <li>Cад Мечуринец</li>
-                  <li>Площадь: 70 м2</li>
-                  <li>Cтоимость: 35 500 р.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="our-clients">
-    <h2>нашими клиентами уже стали</h2>
-    <div class="container flex">
-      <div class="brends">
-        <div class="brends-img">
-          <img src="/img/brends.png" alt="" />
-        </div>
-        <h4>Получить подробное коммерческое <br>предложение в течении 20 минут</h4>
-      </div>
-      <div class="form">
-        <form action="">
-          <span>получи бесплатную консультацию или расчет стоимости</span>
-          <input type="text" name="name" placeholder="введите имя" required />
-          <input type="text" name="name" placeholder="введите телефон" required />
-          <button type="submit">отсавить заявку</button>
-          <p>Я согласен на обработку <br>своих персональных данных</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section class="plus">
-    <h2>преимущества</h2>
-    <div class="container flex">
-      <div class="plus-item">
-        <div class="plus-item_img">
-          <img src="/img/p1.png" alt="" />
-        </div>
-        <article class="plus-item_info">
-          <h4>Профессиональный подход.</h4>
-          <p>Строительные работы в Челябинске проводятся только опытными
-            специалистами, располагающими современным инструментом, материалами.
-            Деятельность «УралСтройТорг» неоднократно была отмечена вниманием экспертов самого высокого уровня.
-          </p>
-        </article>
-      </div>
-
-      <div class="plus-item">
-        <div class="plus-item_img">
-          <img src="/img/p2.png" alt="" />
-        </div>
-        <article class="plus-item_info">
-          <h4>Оптимальная стоимость.</h4>
-          <p>Мы придерживаемся лояльной ценовой политики. Благодаря этому обращаться
-            к нам могут как представители крупных компаний, так и частные лица.</p>
-        </article>
-      </div>
-
-      <div class="plus-item">
-        <div class="plus-item_img">
-          <img src="/img/p3.png" alt="" />
-        </div>
-        <article class="plus-item_info">
-          <h4>Инновационные технологии.</h4>
-          <p>
-            Они позволяют нам решать любые задачи в кратчайшие сроки и безошибочно.
-          </p>
-        </article>
-      </div>
-
-      <div class="plus-item">
-        <div class="plus-item_img">
-          <img src="/img/p4.png" alt="" />
-        </div>
-        <article class="plus-item_info">
-          <h4>Реализация любых пожеланий клиента.</h4>
-          <p>
-            Несмотря на то, что Челябинск – крупный город и в нем работает большое
-            количество компаний, прислушиваются к запросам заказчиков немногие.
-            Мы уделяем пристальное внимание финансовым возможностям и требованиям к проводимым работам.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container flex">
-      <div class="contacts">
-        <h5>Контакты:</h5>
-        <div class="contacts-item">
-          <span>Челябинск, ул. Барбюса 132 а</span>
-          <span> info@74ust.ru, </span>
-          <span>8 951 323 1111</span>
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d854.3998721895714!2d61.42654661527264!3d55.131232901895785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c58d4b9741b24f%3A0x2d3ee9fbaa2c9bc3!2z0YPQuy4g0JHQsNGA0LHRjtGB0LAsIDEzMtCQLCDQp9C10LvRj9Cx0LjQvdGB0LosINCn0LXQu9GP0LHQuNC90YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA0NTQwNzg!5e0!3m2!1sru!2sua!4v1537605936315"
-                width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
-      <div class="form">
-        <form action="">
-          <span>получи бесплатную консультацию или расчет стоимости</span>
-          <input type="text" name="name" placeholder="введите имя" required />
-          <input type="text" name="name" placeholder="введите телефон" required />
-          <button type="submit">отсавить заявку</button>
-          <p>Я согласен на обработку <br>своих персональных данных</p>
-        </form>
-      </div>
-    </div>
-  </footer>
-
-  <section class="popup-form">
-    <div class="overlay"></div>
-    <div class="form">
-      <div class="text">
-        <h4 id="form-text"></h4>
-        <img class="close" src="/img/close.png" alt="">
-      </div>
-      <form action="">
-        <span>получи бесплатную консультацию или расчет стоимости</span>
-        <input type="text" name="name" placeholder="введите имя" required />
-        <input type="text" name="name" placeholder="введите телефон" required />
-        <button type="submit">отсавить заявку</button>
-        <p>Я согласен на обработку <br>своих персональных данных</p>
-      </form>
-    </div>
-  </section>
-
-  <section class="popup-success">
-    <div class="overlay"></div>
-    <div class="form">
-      <h4>Данные успешно отправлены</h4>
-      <h5>Наш менеджер свяжется с Вами в ближайшее время.</h5>
-      <img src="/img/okay.png" alt="" />
-    </div>
-  </section>
-
-	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="stylesheet" href="css/slick.min.css">
-	<script src="js/scripts.min.js"></script>
-</body>
-</html>
+</style>
