@@ -1,187 +1,215 @@
-<div id="preloader-wrapper">
-	<div class="center">
-		<img src="logo.png">
-		<div id="preloader"></div>
-	</div>
-</div>
-<style type="text/css">
-	#preloader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  user-select: none;
-  pointer-events: none;
-  background-color: #f0f0f0;
-}
-.center {
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%, -50%);
-}
-.center img {
-	top: 50%;
-	left: 50%;
-	width: 50px;
-	position: absolute;
-	transform: translate(-50%, -50%);
-}
-.ring-border, #preloader, #preloader:before, #preloader:after {
-  border-radius: 50%;
-  border: 2px solid transparent;
-}
-#preloader {
-  display: block;
-  position: relative;
-  width: 180px;
-  height: 180px;
-  border-top-color: #fac500;
-  -webkit-animation: spin 2s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 2s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-#preloader:before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  border-top-color: #000;
-  -webkit-animation: spin-reverse 0.7s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin-reverse 0.7s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-#preloader:after {
-  content: "";
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  right: 30px;
-  bottom: 30px;
-  border-top-color: #38ce58;
-  -webkit-animation: spin 1.7s linear infinite;
-  /* Chrome, Opera 15+, Safari 5+ */
-  animation: spin 1.7s linear infinite;
-  /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-@-moz-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(360deg);
-    /* IE 9 */
-    transform: rotate(360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-@-webkit-keyframes spin-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(-360deg);
-    /* IE 9 */
-    transform: rotate(-360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-@keyframes spin-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(-360deg);
-    /* IE 9 */
-    transform: rotate(-360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-@-moz-keyframes spin-reverse {
-  0% {
-    -webkit-transform: rotate(0deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(0deg);
-    /* IE 9 */
-    transform: rotate(0deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: rotate(-360deg);
-    /* IE 9 */
-    transform: rotate(-360deg);
-    /* Firefox 16+, IE 10+, Opera */
-  }
-}
-
-</style>
-<script type="text/javascript">
-	$(window).load(function(){
-		$('#preloader-wrapper').fadeOut(500);
-	});
-</script>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">
+	<!-- <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container flex ai-center jc-space-between">
+      <img class="header-logo" src="img/logo.png" alt="logotype" />
+      <div>
+        <img class="header-name" src="img/name.png" alt="name" />
+        <div class="header-buttons flex jc-space-between">
+          <button>Обратный звонок</button>          
+          <button>Записаться на консультацию</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="contacts">
+      <div class="container flex ai-center jc-space-between">
+        <span>Октябрьская ул. 36, м. Марьина Роща</span>
+        <span>+7 (495) 749-43-49</span>
+      </div>
+    </div>
+    <div class="symptoms container">
+      <h1>Симптомы пародонтита</h1>
+      <div class="flex flex-wrap jc-space-between">
+        <div class="flex ai-center jc-center symptoms-item">
+          <span>Кровоточивость десен</span>
+        </div>
+        <div class="flex ai-center jc-center symptoms-item">
+          <span>Боль при жевании</span>
+        </div>
+        <div class="flex ai-center jc-center symptoms-item">
+          <span>Запах изо рта</span>
+        </div>
+        <div class="flex ai-center jc-center symptoms-item">
+          <span>Подвижность зубов</span>
+        </div>
+        <div class="flex ai-center jc-center symptoms-item">
+          <span>Оголение шеек зубов</span>
+        </div>
+        <div class="flex ai-center jc-center symptoms-item">
+          <span>гноетечение</span>
+        </div>
+      </div>
+    </div>
+    <div class="description container">
+      <p>
+        Если у Вас есть хоть один из этих симптомов, Вам необходимо как можно скорее посетить стоматолога. И лучше не просто врача-стоматолога общей практики, а специалиста по заболеваниям тканей пародонта – пародонтолога.
+      </p>
+      <p>
+        Несмотря на устоявшееся мнение, пародонтит сегодня успешно поддается лечению. При этом, чем раньше начато лечение, тем оно будет более эффективным, малотравматичным и менее затратным с финансовой точки зрения.   
+      </p>
+    </div>
+    <div class="banner container">
+      <img src="img/banner.png" alt="banner" />
+      <span>РЕКЛАМНЫЙ<br>БАННЕР</span>
+    </div>
+    <button class="consultation">записаться на консультацию</button>
+    <div class="treatment container">
+      <div class="treatment-item">
+        <span>Эффективное лечение пародонтита</span>
+      </div>
+      <div class="treatment-row flex jc-space-between">
+        <div  class="treatment-row_item">
+          <span>
+            Новейшие технологии
+            диагностики: компьютерный томограф
+            последнего поколения,
+            и програмно-апаратный
+            комплекс
+            «Флорида проуб» (США)
+          </span>
+        </div>
+        <div  class="treatment-row_item">
+          <span>
+            Междисциплинарный
+            подход при выборе
+            плана лечения
+            (в составлении плана
+            участвуют пародонтолог,
+            протезист, имплантолог,
+            терапевт)
+          </span>
+        </div>
+        <div  class="treatment-row_item">
+          <span>
+            Лечение проводится
+            в отдельном,
+            специализированном
+            кабинете
+            дипломированным
+            врачом-пародонтологом
+            с 25-летним опытом
+            работы по специальности
+          </span>
+        </div>
+        <div  class="treatment-row_item flex ai-center jc-center">
+          <span>
+            Быстро<br><br>
+            Эффективно<br><br>
+            безболезненно
+          </span>
+        </div>
+      </div>
+      <div class="treatment-item">
+        <span>Имплантация при пародонтите (возможна)</span>
+      </div>
+      <div class="treatment-item">
+        <span>Протезирование при пародонтите (обязательно)</span>
+      </div>
+    </div>
+    <button class="consultation">записаться на консультацию</button>
+    <div class="steps">
+      <div class="container">
+        <h2>Как проходит лечение пародонтита в клинике «Стоматология Бест»</h2>
+        <div class="flex jc-space-between">
+          <div class="steps-item flex ai-center">
+            <span>
+              Компьютерная томография, замеры зубо-десневых карманов,
+              Постановка диагноза
+            </span>
+          </div>
+          <div class="steps-item flex ai-center">
+            <span>
+              Чистка и Кюретаж поддесневых камней
+            </span>
+          </div>
+          <div class="steps-item flex ai-center bottom">
+            <span>
+              лазерная обработка
+            </span>
+          </div>
+        </div>
+        <div class="flex jc-space-between mob-reverce">
+          <div class="steps-item flex ai-center none">
+            <span>
+              Здоровая десна
+            </span>
+          </div>
+          <div class="steps-item flex ai-center left">
+            <span>
+              Поддерживающая терапия
+            </span>
+          </div>
+          <div class="steps-item flex ai-center left">
+            <span>
+              Обработка ультразвуковой системой «Вектор»
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="consultation">записаться на консультацию</button>
+    <h3 class="why">Почему тысячи людей доверяют клинике «Стоматология Бест»</h3>
+    <div class="why-list container flex ai-end jc-center">
+      <img src="img/logo-min.png" alt="logo" />
+      <ul>
+        <li>Учредители -- практикующие стоматологи с 1989 года</li>
+        <li>Клиника работает с 2008 года</li>
+        <li>Дипломированные врачи-пародонтологи</li>
+        <li>Специализированный пародонтологический кабинет </li>
+        <li>Только сертифицированные материалы</li>
+        <li>Финансовый план не содержит скрытых позиций</li>
+        <li>Любые формы оплаты: наличная, безналичная, по картам</li>
+        <li>Удобное расположение у м.Марьина Роща и ТТК</li>
+        <li>Наличие парковки перед клиникой</li>
+      </ul>
+    </div>
+    <button class="consultation">записаться на консультацию</button>
+    <div class="comments container flex ai-end jc-space-between">
+      <div class="comments-title">
+        <span>Отзывы</span>
+        <span>наших</span>
+        <span>Пациентов</span>
+      </div>
+      <div class="comments-text">
+        <p>	
+          Познакомившись с клиникой Стоматология Бест, приобрел для себя важную 
+          в жизни уверенность и защищенность в вопросе заботы о здоровье. 
+          Большая удача - найти надежных врачей!
+        </p>
+      </div>
+      <div class="comments-author">
+        <span>Владимир</span>
+        <span>29.05.2017</span>
+      </div>
+    </div>
+    <div class="map container">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A575029968e6a6d0d09de1cbed1a4d2b2a4f71330cf644ee357d65431d6c9489b&amp;source=constructor&amp;scroll=false" frameborder="0"></iframe>
+    </div>
+  </main>
+  <footer>
+    <div class="container flex ai-center jc-space-between">
+      <span>127018 Москва, ул. Октябрьская, дом 36</span>
+      <span>+7 (495) 689-08-20</span>
+    </div>
+  </footer>
+</body>
+</html>
