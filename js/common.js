@@ -30,6 +30,7 @@ form.onsubmit = function(e) {
     xhr.open("POST", "/url");
     xhr.send(formData);
     closeForm();
+    document.forms.contact.reset();
 };
 
 window.onload = () => {

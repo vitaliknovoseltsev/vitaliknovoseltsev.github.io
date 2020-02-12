@@ -33,7 +33,7 @@
     <div class="contacts">
       <div class="container flex ai-center jc-space-between">
         <span>Октябрьская ул. 36, м. Марьина Роща</span>
-        <span>+7 (495) 749-43-49</span>
+        <a href="tel:+7 (495) 749-43-49">+7 (495) 749-43-49</a>
         <button class="mobile">Записаться на прием</button>
       </div>
     </div>
@@ -216,17 +216,21 @@
   <footer>
     <div class="container flex ai-center jc-space-between">
       <span>127018 Москва, ул. Октябрьская, дом 36</span>
-      <span>+7 (495) 689-08-20</span>
+      <a href="tel:+7 (495) 689-08-20">+7 (495) 689-08-20</a>
     </div>
   </footer>
   <div id="form" style="display: none;">
     <div class="form-overlay"></div>
     <form name="contact">
       <img id="close-form" src="img/close.svg" alt="close" />
-      <input type="text" name="name" required placeholder="Введите имя" />
-      <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" />
-      <textarea name="comment" cols="30" rows="10" placeholder="Введите комментарий"></textarea>
-      <input type="submit" value="Записаться" />
+      <input class="input" type="text" name="name" required placeholder="Введите имя" />
+      <input class="input"type="tel" name="phone" required placeholder="+7 (___) ___-__-__" />
+      <textarea class="input" name="comment" cols="30" rows="10" placeholder="Введите комментарий"></textarea>
+      <div class="flex">
+        <input type="checkbox" name="policy" value="policy" required>
+        <span>Заполнив форму, я даю согласие на обработку персональных данных (Ф.И.О., телефон, e-mail) для связи со мной, хранение моих данных в течение года для возможности информирования, без права передачи третьим лицам и другим организациям.</span>  
+      </div>
+      <input class="input" type="submit" value="Записаться" />
     </form>
   </div>
   <link rel="stylesheet" href="css/style.css">

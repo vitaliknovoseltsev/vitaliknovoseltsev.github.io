@@ -120,11 +120,12 @@ button {
     padding: 10px 0px;
     background: #4a5c77;
 }
-.contacts span {
+.contacts span, .contacts a{
     color: white;
     font-family: 'HeliosCond';
     font-weight: bold;
     font-size: 24px;
+    text-decoration: none;
 }
 .small-banner {
     height: 130px;
@@ -414,13 +415,14 @@ footer {
 footer .container {
     height: 100px;
 }
-footer span {
+footer span, footer a {
     color: #fff;
     font-size: 16px;
 	font-family: 'Arial';
 }
-footer span:last-child {
+footer a {
     font-size: 20px;
+    text-decoration: none;
 }
 #form {
     top: 0px;
@@ -462,7 +464,7 @@ footer span:last-child {
     cursor: pointer;
     position: absolute;
 }
-#form form input, #form form textarea {
+#form form .input {
     width: 100%;
     height: 40px;
     font-size: 16px;
@@ -487,7 +489,16 @@ footer span:last-child {
     cursor: pointer;
     text-transform: uppercase;
 }
-#form form textarea {
+#form form input[type=checkbox] {
+    margin-left: 0px;
+}
+#form form span {
+    font-family: 'Arial';
+    font-size: 12px;
+    color: gray;
+    padding: 2px 0px 20px 0px;
+}
+#form form textarea.input {
     height: 60px;
     resize: none;
     padding: 10px 15px;
@@ -514,7 +525,7 @@ footer span:last-child {
         z-index: 3;
         position: fixed;
     }
-    .contacts span:first-child {
+    .contacts span {
         display: none;
     }
     .contacts button {
@@ -678,7 +689,7 @@ footer span:last-child {
     .symptoms .symptoms-item {
         width: 100%;
     }
-    .contacts span {
+    .contacts a {
         font-size: 14px;
     }
     .contacts button {
@@ -690,11 +701,11 @@ footer span:last-child {
     footer .container {
         height: 60px;
     }
-    footer span, footer span:last-child {
+    footer span, footer a {
         font-size: 16px;
         width: 50%;
     }
-    footer span:last-child {
+    footer a {
         text-align: right;
     }
 }
