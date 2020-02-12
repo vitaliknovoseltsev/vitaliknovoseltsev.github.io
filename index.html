@@ -17,6 +17,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="form">
+    <div class="form-overlay"></div>
+    <form name="contact">
+      <img id="close-form" src="img/close.svg" alt="close" />
+      <input type="text" name="name" required placeholder="Введите имя" />
+      <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" />
+      <textarea name="comment" cols="30" rows="10" placeholder="Введите комментарий"></textarea>
+      <input type="submit" value="Записаться" />
+    </form>
+  </div>
   <header class="header">
     <div class="container flex ai-center jc-space-between">
       <img class="header-logo" src="img/logo.png" alt="logotype" />
@@ -34,7 +44,15 @@
       <div class="container flex ai-center jc-space-between">
         <span>Октябрьская ул. 36, м. Марьина Роща</span>
         <span>+7 (495) 749-43-49</span>
+        <button class="mobile">Записаться на прием</button>
       </div>
+    </div>
+    <div class="small-banner flex jc-center ai-center">
+      <div class="small-banner_title">
+        <span>Пародонтит</span>
+        <span>лечится?</span>
+      </div>
+      <span class="small-banner_subtitle">Да!</span>
     </div>
     <div class="symptoms container">
       <h1>Симптомы пародонтита</h1>
@@ -80,7 +98,7 @@
         <div  class="treatment-row_item">
           <span>
             Новейшие технологии
-            диагностики: компьютерный томограф
+            диагностики: компьютерный томограф
             последнего поколения,
             и програмно-апаратный
             комплекс
@@ -129,7 +147,7 @@
     <div class="steps">
       <div class="container">
         <h2>Как проходит лечение пародонтита в клинике «Стоматология Бест»</h2>
-        <div class="flex jc-space-between">
+        <div class="steps-list flex jc-space-between">
           <div class="steps-item flex ai-center">
             <span>
               Компьютерная томография, замеры зубо-десневых карманов,
@@ -147,7 +165,7 @@
             </span>
           </div>
         </div>
-        <div class="flex jc-space-between mob-reverce">
+        <div class="steps-list flex jc-space-between mob-reverce">
           <div class="steps-item flex ai-center none">
             <span>
               Здоровая десна
@@ -202,7 +220,7 @@
       </div>
     </div>
     <div class="map container">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A575029968e6a6d0d09de1cbed1a4d2b2a4f71330cf644ee357d65431d6c9489b&amp;source=constructor&amp;scroll=false" frameborder="0"></iframe>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A575029968e6a6d0d09de1cbed1a4d2b2a4f71330cf644ee357d65431d6c9489b&amp;source=constructor&amp;scroll=false"></iframe>
     </div>
   </main>
   <footer>
@@ -211,5 +229,6 @@
       <span>+7 (495) 689-08-20</span>
     </div>
   </footer>
+  <script src="js/common.js"></script>
 </body>
 </html>
