@@ -473,6 +473,9 @@ footer span:last-child {
     padding: 0px 15px;
 	font-family: 'Arial';
     border: 1px solid #4a5c77;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 #form form input[type=submit] {
     border: none;
