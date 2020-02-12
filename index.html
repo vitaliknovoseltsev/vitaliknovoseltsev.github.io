@@ -14,19 +14,8 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="form">
-    <div class="form-overlay"></div>
-    <form name="contact">
-      <img id="close-form" src="img/close.svg" alt="close" />
-      <input type="text" name="name" required placeholder="Введите имя" />
-      <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" />
-      <textarea name="comment" cols="30" rows="10" placeholder="Введите комментарий"></textarea>
-      <input type="submit" value="Записаться" />
-    </form>
-  </div>
   <header class="header">
     <div class="container flex ai-center jc-space-between">
       <img class="header-logo" src="img/logo.png" alt="logotype" />
@@ -220,7 +209,7 @@
       </div>
     </div>
     <div class="map container">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A575029968e6a6d0d09de1cbed1a4d2b2a4f71330cf644ee357d65431d6c9489b&amp;source=constructor&amp;scroll=false"></iframe>
+      <iframe id="map"></iframe>
     </div>
   </main>
   <footer>
@@ -229,6 +218,17 @@
       <span>+7 (495) 689-08-20</span>
     </div>
   </footer>
-  <script src="js/common.js"></script>
+  <div id="form" style="display: none;">
+    <div class="form-overlay"></div>
+    <form name="contact">
+      <img id="close-form" src="img/close.svg" alt="close" />
+      <input type="text" name="name" required placeholder="Введите имя" />
+      <input type="tel" name="phone" required placeholder="+7 (___) ___-__-__" />
+      <textarea name="comment" cols="30" rows="10" placeholder="Введите комментарий"></textarea>
+      <input type="submit" value="Записаться" />
+    </form>
+  </div>
+  <link rel="stylesheet" href="css/style.css">
+  <script async src="js/common.js"></script>
 </body>
 </html>

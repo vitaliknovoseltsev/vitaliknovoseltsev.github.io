@@ -32,3 +32,11 @@ form.onsubmit = function(e) {
     closeForm();
 };
 
+window.onload = () => {
+    form.style.display = 'block';
+    
+    setTimeout(() => {
+        document.getElementById('map').src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A575029968e6a6d0d09de1cbed1a4d2b2a4f71330cf644ee357d65431d6c9489b&amp;source=constructor&amp;scroll=false';
+    }, 3000);
+}
+
