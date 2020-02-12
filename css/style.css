@@ -90,6 +90,9 @@ p {
 button {
     color: #fff;
     border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
     font-family: 'HeliosCond';
     font-weight: bold;
     font-size: 12px;
@@ -470,7 +473,7 @@ footer span:last-child {
 }
 #form form input[type=submit] {
     border: none;
-    background: #76a3bd;
+    background: #d24a43;
     color: #fff;
     font-family: 'HeliosCond';
     font-weight: bold;
@@ -511,7 +514,8 @@ footer span:last-child {
     .contacts button {
         width: 190px;
         height: 40px;
-        background: #76a3bd;
+        background: #d24a43;
+        white-space: pre;
     }
     body {
         padding-top: 60px;
@@ -540,6 +544,7 @@ footer span:last-child {
     .description p {
         font-size: 16px;
         line-height: 20px;
+        margin: 10px 0px;
     }
     .treatment .treatment-row .treatment-row_item span {
         font-size: 14px;
