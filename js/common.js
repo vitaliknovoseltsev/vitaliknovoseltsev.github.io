@@ -38,6 +38,23 @@ window.onload = () => {
     
     setTimeout(() => {
         document.getElementById('map').src = 'https://yandex.ru/map-widget/v1/?um=constructor%3A575029968e6a6d0d09de1cbed1a4d2b2a4f71330cf644ee357d65431d6c9489b&amp;source=constructor&amp;scroll=false';
+        $('#comments-slider').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            draggable: false,
+            prevArrow: '<img src="/img/next.svg" class="slider-btn prev" />',
+            nextArrow: '<img src="/img/next.svg" class="slider-btn next" />',
+            responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    draggable: true,
+                  }
+                },
+            ]
+        });
     }, 3000);
 }
 
