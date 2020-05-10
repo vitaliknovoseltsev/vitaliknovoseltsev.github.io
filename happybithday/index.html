@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>С Днем Рождения</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">
+	<!-- <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon"> -->
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Balsamiq+Sans:ital,wght@1,700&family=Lobster&family=Pacifico&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+  .ballon {
+    width: 100px;
+    z-index: -1;
+    position: fixed;
+    top: 100%;
+    opacity: 0.5;
+  }
+  .ballon.top {
+    top: -200px;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #c3e7ff;
+  }
+  #container {
+    width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
+  #text {
+    width: 50%;
+    padding-right: 20px;
+  }
+  p {
+    display: none;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  #text p.active {
+    display: block;
+  }
+  #text-1 {
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+  }
+  #text-2 {
+    color: #4E52B4;
+    font-family: 'Lobster', cursive;
+  }
+  #text-3 {
+    color: #CF79AD;
+    font-family: 'Pacifico', cursive;
+  }
+  #text-4 {
+    font-size: 30px;
+    line-height: 40px;
+    color: #4D9441;
+    font-family: 'Amatic SC', cursive;
+  }
+  #text-5 {
+    color: #DB6248;
+    font-family: 'Balsamiq Sans', cursive;
+  }
+  #image {
+    width: 50%;
+  }
+  #popup {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #82BEE0;
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    font-family: 'Roboto', sans-serif;
+    transition: left .5s .2s ease;
+  }
+  #popup h1 {
+    font-size: 60px;
+  }
+  #popup span {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 0px;
+    transition: all .2s linear;
+  }
+  #popup #back {
+    top: 20px;
+    right: 25px;
+    width: 50px;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all .2s ease;
+  }
+  #popup span:hover {
+    color: #C882E0;
+    font-weight: 500;
+  }
+  #popup.close {
+    left: calc(-100% + 100px);
+    transition: left .5s ease;
+  }
+  #popup.close #back {
+    opacity: 1;
+    pointer-events: all;
+    transition: all .2s .5s ease;
+  }
+  audio {
+    display: none;
+  }
+</style>
+<body>
+  <audio loop="loop">
+    <source src="music/music1.mp3" type="audio/mpeg">
+  </audio>
+  <div id="popup">
+    <img id="back" src="/images/back.svg" alt="" />
+    <div>
+      <h1>Какая Настя ты сегодня?</h1>
+      <span id="1">Анастасия Владиславовна Нагорная</span>
+      <span id="2">Бабушка Настя</span>
+      <span id="3">Маленькая Настюшка</span>
+      <span id="4">Настюханчик</span>
+      <span id="5">Настюха</span>
+    </div>
+  </div>
+  <div id="container">
+    <div id="text">
+      <p id="text-1">
+        Анастасия Владиславовна Нагорная, поздравляю вас С Днем Рождения!
+        <br>
+        <br>
+        Желаю вам найти скорейшего нахождения дела вашей всей жизни, в котором вы расстворитесь полностью.
+        <br>
+        <br>
+        Желаю, что бы в каждом вашем начинании удача и успех наступали вам на пятки, а все невзгоды и грусти
+        утопали в тени вашей славы!
+      </p>
+      <p id="text-2">
+        Дорогая бабушка Настя, вот тебе исполнилось целых 22 года!
+        <br>
+        <br>
+        С этого момента ты официально становишься бабушкой и встаешь на путь ворчания, кряхчения, бухчения
+        и трушения старческим песком, но я знаю, что все это не про тебя, ведь ты будешь
+        молодой и красивой бабушкой, которая не будет кряхтеть и ворчать
+        и никому не даст скучать!       
+      </p>
+      <p id="text-3">
+        Настюшка, с Днем Рождения! 
+        <br>
+        <br>
+        Вот тебе 22 годика. Я не видел тебя совсем крохой, когда ты делала свои 
+        первые шаги и говорила свои первые слова, да и об этом тебе сегодня расскажут родители, 
+        уверен в этом, но сейчас я вижу перед собой взрослую, сформировавшуюся, умную и красивейшую девушку.
+        <br>
+        <br>
+        Желаю тебе цвести и пахнуть каждый день, ведь не даром ты родилась в весеннюю пору. Пусть каждый
+        человек, находящийся с тобой рядом, ощущает это тепло и радость исходящее от тебя.
+        <br>
+        <br>
+        Я желаю тебе с каждый годом становиться только лучше, красивее (хотя куда уже можно больше-то),
+        успешнее и умнее. 
+      </p>
+      <p id="text-4">
+        Настюханчик, поздравляю тебя с Днем Рождения!
+        <br>
+        <br>
+        Я искренне желаю тебе радости и добра, оставайся такой же веселой и озорной, а местами
+        немного странненькой и непредсказуемой. Я желаю тебе что бы каждый день
+        приносил тебе только самые ярки и положительные эмоции, что бы тебя окружали
+        только самые достойные люди, которые дарили тебе счастье, любовь и заботу!
+      </p>
+      <p id="text-5">
+        Настюха, С Днем Рождения! 
+        <br>
+        <br>
+        22 года - это прекрасная пора. Ты взрослая и самостоятельная, а это значит, что теперь
+        можно выпить с подружаней и не скрываться от родитлей. Это значит, что шапку ты теперь
+        надеваешь потому что холодно, а не потому что мама так сказала.
+        <br>
+        <br>
+        Я очень хочу, что бы сегодняшний день тебе запонился
+        и ты была окружена самыми близкими и дорогими для тебя людьми, которые окутают тебя
+        вниманием и заботой. Поэтому я тебе желаю, что бы ты чувствовала это внимание и заботу
+        не только в этой день, но и во все последующие!
+        <br>
+        <br>
+        Ты очень хороший человек и я верю, что ты будешь притягивать к себе только самое
+        хорошее и прекрасное мира сего
+      </p>
+    </div>
+    <img id="image" src="" alt="" />
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
