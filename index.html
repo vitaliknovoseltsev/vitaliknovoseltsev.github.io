@@ -29,6 +29,18 @@
         transform: rotate(360deg);
       }
     }
+    @keyframes hide {
+      0% {
+        top: 0px;
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        top: -100%;
+      }
+    }
     .loader {
       top: 0px;
       left: 0px;
@@ -36,6 +48,7 @@
       height: 100%;
       position: fixed;
       background: #fff;
+      animation: hide 3s 5s ease;
     }
     .loader-images {
       top: 50%;
