@@ -1,0 +1,118 @@
+.services {
+	margin-top: 40px;
+	background-image: url('../img/bg_service.png');
+	background-size: cover;
+}
+.services_block {
+	display: flex;
+	justify-content: space-between;
+	+ .services_block {
+		margin-top: 30px;
+	}
+	&_item {
+		display: flex;
+		align-items: flex-end;
+		background-size: cover;
+		background-position: center center;
+		&__title {
+			height: 55px;
+			display: flex;
+			align-items: center;
+			padding: 0px 25px;
+			background-color: #c3252c;
+			span {
+				font-size: 14px;
+			}
+			p {
+				color: #fff;
+				margin-top: 5px !important;
+			}
+		}
+	}
+}
+
+#service-1 {
+	width: 550px;
+	height: 258px;
+	background-image: url('/img/service-1.png');
+}
+#service-2 {
+	width: 100%;
+	height: 312px;
+	background-image: url('/img/service-2.png');
+}
+#service-3 {
+	width: 278px;
+	height: 600px;
+	margin-left: 30px;
+	background-image: url('/img/service-3.png');
+}
+#service-4 {
+	width: calc(50% - 15px);
+	height: 300px;
+	background-image: url('/img/service-4.png');
+}
+#service-5 {
+	width: calc(50% - 15px);
+	height: 300px;
+	background-image: url('/img/service-5.png');
+}
+#service-6 {
+	width: 278px;
+	height: 600px;
+	margin-right: 30px;
+	justify-content: flex-end;
+	background-image: url('/img/service-6.png');
+} 
+#service-6-1 {
+	display: none;
+} 
+#service-7 {
+	width: 280px;
+	height: 280px;
+	background-image: url('/img/service-7.png');
+}
+#service-8 {
+	flex: auto;
+	height: 280px;
+	margin-left: 30px;
+	background-image: url('/img/service-8.png');
+}
+#service-9 {
+	width: 100%;
+	height: 290px;
+	background-image: url('/img/service-9.png');
+}
+#service-1 .services_block_item__title  {
+	height: 70px;
+	width: 80%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+#service-2 .services_block_item__title,
+#service-9 .services_block_item__title {
+	width: 50%;
+}
+#service-3 .services_block_item__title {
+	width: 230px;
+}
+#service-4 .services_block_item__title,
+#service-5 .services_block_item__title {
+	width: 80%;
+}
+#service-8 .services_block_item__title {
+	width: 40%;
+}
+
+.column {
+	flex: auto;
+	.row {
+		display: flex;
+		margin-bottom: 30px;
+		justify-content: space-between;
+		p {
+			margin-top: 70px;
+		}
+	}
+}

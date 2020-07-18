@@ -1,0 +1,19 @@
+.about {
+	padding-bottom: 55px;
+	&-blocks {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 62px;
+		&__red{
+			width: 335px;
+			height: 90px;
+			background-color: #c3252c;
+			margin-top: 20px;
+		}
+	}
+	&-description {
+		max-width: 1418px;;
+		font-size: 42px;
+		font-weight: 400;
+	}
+}

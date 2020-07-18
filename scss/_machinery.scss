@@ -1,0 +1,72 @@
+.machinery {
+	background: url('../img/machinery_bg.jpg') center center no-repeat;
+	background-size: cover;
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&-item {
+		position: relative;
+		padding-top: 16px;
+		max-width: 324px;
+		min-height: 445px;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: -16px;
+			display: block;
+			width: 268px;
+			height: 331px;
+			background-color: #c3252c;
+			z-index: 0;
+		}
+		&_img {
+			position: relative;
+			z-index: 2;
+			background-color: #fff;
+		}
+		&__info {
+			position: relative;
+			z-index: 2;
+			background-color: #fff;
+			height: 214px;
+			padding: 15px 18px;
+			h4 {
+				font-size: 17px;
+				font-weight: 400;
+				text-transform: uppercase;
+				margin-bottom: 15px;
+			}
+			p {
+				font-size: 17px;
+				font-weight: 400;
+			}
+		}
+	}
+	&-top {
+		max-width: 100%;
+		padding-top: 55px;
+		padding-bottom: 30px;
+		color: #010000;
+		font-size: 31px;
+		font-weight: 400;
+		text-transform: uppercase;
+		.red {
+			color: #c3252c;
+		}
+	}
+	&-bootom {
+		max-width: 1103px;
+		padding-top: 65px;
+		padding-bottom: 50px;
+		color: #010000;
+		font-size: 33px;
+		font-weight: 400;
+		text-transform: uppercase;
+		.red {
+			color: #c3252c;
+		}
+	}
+
+}

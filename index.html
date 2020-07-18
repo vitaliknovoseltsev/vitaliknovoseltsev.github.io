@@ -15,70 +15,586 @@
 	<!-- iOS Safari -->
   <meta name="apple-mobile-web-app-status-bar-style" content="#000">
   <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-  <style>
-    body {
-      pointer-events: none;
-    }
-    @keyframes circle {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-    @keyframes hide {
-      0% {
-        top: 0px;
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        top: -100%;
-      }
-    }
-    .loader {
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      background: #fff;
-      animation: hide 3s 5s ease;
-    }
-    .loader-images {
-      top: 50%;
-      left: 50%;
-      width: 300px;
-      position: absolute;
-      transform: translate(-50%, -50%);
-    }
-    .loader-images_logo {
-      width: 100%;
-      z-index: 2;
-      position: relative;
-    }
-    .loader-orange {
-      top: -13px;
-      left: 78px;
-      width: 180px;
-      position: absolute;
-      animation: circle 5s linear infinite;
-    }
-    .loader-svg {
-      width: 300px;
-      position: relative;
-    }
-  </style>
-  <div class="loader">
-    <div class="loader-images">
-      <img class="loader-images_logo" src="img/logo.svg" alt="" />
-      <img class="loader-orange" src="img/orange.png" alt="" />
-    </div>   
-  </div>
+	
+	<header class="header">
+		<div class="navbars">
+			<div class="container">
+				<div class="navbars__left">
+						<a href="index.html" class="navbars__logo">
+							<img src="img/logo_black.svg" alt="logo">
+							<p>Челдеталь</p>
+						</a>
+
+				</div>
+				<div class="navbars__right">
+					<div class="navbars__call">
+						<img src="img/phone.svg" alt="phone">
+						<a href="tel:89000874376">8 9000 874 376</a>
+					</div>
+					<button class="btn btn__red navbars__btn btn__offer">Быстрый расчёт</button>
+				</div>
+			</div>
+		</div>
+		<div class="header__menu">
+			<div class="container">
+				<div class="menu__wrapper">
+					<div class="burger">
+						<span></span>
+					</div>
+					<div class="menu__nav">
+						<nav class="menu">
+							<a href="details.html" class="menu__item">главная</a>
+							<a href="#services" class="menu__item">услуги</a>
+							<a href="details.html" class="menu__item">изготовление запчастей ЧМЗАП</a>
+							<a href="#conditions" class="menu__item">условия работы</a>
+							<a href="#orders" class="menu__item">выполненные заказы</a>
+							<a href="#contacts" class="menu__item">контакты</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</div>
+		<div class="header__hero header__hero-index hero">
+			<div class="container">
+				<div class="hero__info">
+					<h1 class="hero__title">услуги<br>
+						металлообработки<br>
+						на заказ</h1>
+					<p class="hero__subtitle">Современные станки оперативность работаем с 2016 г.</p>
+				</div>
+				<div class="hero__offer">
+					<a href="#contacts" class=" btn btn__hero">Отправить чертежи или тз</a>
+					<button class="btn btn__red btn__hero btn__offer">Оставить заявку</button>
+				</div>
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.header__hero hero -->
+	</header>
+
+	<section class="infopage">
+		<div class="container">
+			<div class="infopage-title">
+				<span class="red">Наша специализация</span> - полный комплекс услуг по металлобработке
+			</div>
+			<div class="slider-infoblock">
+				<div>
+					<div class="slider-infoblock__grop">
+						<div class="slider-infoblock__item">
+							<span>450</span>
+							<p>
+								Лет совокупного опыта наших <br>
+								высококвалифицированных мастеров
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="slider-infoblock__grop">
+						<div class="slider-infoblock__item">
+							<span>ISO</span>
+							<p>
+								Наша продукция и услуги соответствуют <br>
+								международным стандартам качества
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="slider-infoblock__grop">
+						<div class="slider-infoblock__item">
+							<span>3500</span>
+							<p>
+								Единиц изготовленных <br>
+								деталей по тз заказчика
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="slider-infoblock__grop">
+						<div class="slider-infoblock__item">
+							<span>24/7</span>
+							<p>
+								Ведется работа над выполнением  <br>
+								заказа в короткие сроки
+							</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="slider-infoblock__grop">
+						<div class="slider-infoblock__item">
+							<span>14</span>
+							<p>
+								Отраслей промышленности, где <br>
+								используется наша продукция
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="infopage-bottom">
+				<span class="red">наши услуги</span> - изготовление под заказ запчастей и деталей из металла по чертежам, эскизам или образцам 
+			</div>
+		</div>
+	</section>
+
+	<div class="services" id="services">
+		<div class="container">
+			<div class="services_block">
+				<div class="column">
+					<div class="row">
+						<p>
+							мы предлагаем сотрудничество<br>
+							и решение  задач по следующим<br>
+							направлениям 
+						</p>
+						<div class="services_block_item" id="service-1">
+							<div class="services_block_item__title">
+								<span>
+									ИЗГОТОВЛЕНИЕ ДЕТАЛЕЙ<br>
+									ПО ЧЕРТЕЖАМ ЗАКАЗЧИКА
+								</span>
+								<p>
+									от 450 руб. /кв.м
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="services_block_item" id="service-2">
+						<div class="services_block_item__title">
+							<span>
+								ТОКАРНЫЕ РАБОТЫ<br>
+								НА СТАНКЕ ЧПУ
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="services_block_item" id="service-3">
+					<div class="services_block_item__title">
+						<span>
+							ИЗГОТОВЛЕНИЕ СБОРНЫХ<br>
+							МЕТАЛЛОКОНСТРУКЦИЯ
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="services_block services_block_row-2 ">
+				<div class="services_block_item" id="service-4">
+					<div class="services_block_item__title">
+						<span>
+							ТОКАРНЫЕ РАБОТЫТОКАРНЫЕ РАБОТЫ
+						</span>
+					</div>
+				</div>
+				<div class="services_block_item" id="service-5">
+					<div class="services_block_item__title">
+						<span>
+							ИЗГОТОВЛЕНИЕ ЗАПЧАСТЕЙ<br>
+							ДЛЯ ПРИЦЕПОВ
+							И ПОЛУПРИЦЕПОВ ЧМЗАП
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="services_block">
+				<div class="services_block_item" id="service-6">
+					<div class="services_block_item__title">
+						<span>
+							РАСПИЛ МЕТАЛЛА<br>
+							НА ЛЕНТОЧНО-ПИЛЬНОМ<br>
+							СТАНКЕ
+						</span>
+					</div>
+				</div>
+				<div class="services_block_item" id="service-6-1">
+					<div class="services_block_item__title">
+						<span>
+							ИЗГОТОВЛЕНИЕ СБОРНЫХ<br>
+							МЕТАЛЛОКОНСТРУКЦИЯ
+						</span>
+					</div>
+				</div>
+				<div class="column">
+					<div class="row">
+						<div class="services_block_item" id="service-7">
+							<div class="services_block_item__title">
+								<span>
+									ИЗГОТОВЛЕНИЕ СТРЕМЯНКИ<br> 
+									РЕССОРЫ ПО ОБРАЗЦУ<br> 
+									ЗАКАЗЧИКА
+								</span>
+							</div>
+						</div>
+						<div class="services_block_item" id="service-8">
+							<div class="services_block_item__title">
+								<span>
+									ФРЕЗЕРНЫЕ РАБОТЫ
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="services_block_item" id="service-9">
+						<div class="services_block_item__title">
+							<span>
+								ТЕРМООБРАБОТКА
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="machinery-top">
+			<span class="red">наши станки, используемые в производстве</span> - мы располагаем всем необходимым 
+			оборудованием, чтобы выполнить для вас изготовление необходимых 
+			деталей или запчастей из металла
+		</div>
+	</div>
+	<div class="machinery">
+		<div class="container machinery-wrapper">
+			<div class="machinery-item">
+				<div class="machinery-item_img">
+					<img src="img/machine.png" alt="" />
+				</div>
+				<div class="machinery-item__info">
+					<h4>Станок токарный с ЧПУ 16а20 чпу</h4>
+					<p>
+						Предназначен для токарной обработки наружных (диаметром до 400 мм) и 
+						внутренних поверхностей деталей (длиной до 1000 мм) со ступенчатым и 
+						криволинейным профилем в осевом сечении.
+					</p>
+				</div>
+			</div>
+			<div class="machinery-item">
+				<div class="machinery-item_img">
+					<img src="img/machine.png" alt="" />
+				</div>
+				<div class="machinery-item__info">
+					<h4>Станок токарный ТС16А216ФЗчпу</h4>
+					<p>
+						Предназначен для обработки тел вращения и выполнения таких 
+						операций, как нарезание различных видов резьб, сверление и 
+						растачивание центоровых отверстий, прорезка канавок, снятие фасок, отрезки.  
+					</p>
+				</div>
+				
+			</div>
+			<div class="machinery-item">
+				<div class="machinery-item_img">
+					<img src="img/machine.png" alt="" />
+				</div>
+				<div class="machinery-item__info">
+					<h4>Станок токарный 16 к 20</h4>
+					<p>
+						Предназначен для токарной обработки наружных (диаметром до 400 мм) и 
+						внутренних поверхностей деталей (длиной до 1000 мм) со ступенчатым и 
+						криволинейным профилем в осевом сечении.
+					</p>
+				</div>
+				
+			</div>
+			<div class="machinery-item">
+				<div class="machinery-item_img">
+					<img src="img/machine.png" alt="" />
+				</div>
+				<div class="machinery-item__info">
+					<h4>Токарный автомат 6 ти</h4>
+					<p>
+						Станок модели 1б240 предназначен для обработки сложных деталей 
+						за один цикл, исключив доработку на других станках.
+					</p>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="container" id="conditions">
+		<div class="machinery-bootom">
+			<h3>
+				<span class="red">Условия  работы с нами</span> - самые быстрые сроки изготовления, надежность и 
+				низкая стоимость доставки
+			</h3>
+		</div>
+	</div>
+	<div class="steps">
+		<div class="container">
+			<div class="steps-wrapper">
+				<div class="steps-item">
+					<div class="steps-item_number">
+						<span>01</span>
+					</div>
+					
+					<div class="steps-item_info">
+						<span>Постановка задачи</span>
+						<p>
+							Вы присылаете чертеж, либо
+							обсуждаем с вами задачу по телефону
+						</p>
+					</div>
+				</div>
+				<div class="steps-item">
+					<div class="steps-item_number">
+						<span>02</span>
+					</div>
+					<div class="steps-item_info">
+						<span>Расчет стоимости металлообработки</span>
+						<p>
+							Вы получаете расчет с учетом
+							оптимизации производства и цены
+						</p>
+					</div>
+				</div>
+				<div class="steps-item">
+					<div class="steps-item_number">
+						<span>03</span>
+					</div>
+					<div class="steps-item_info">
+						<span>Проверка материалов и запуск</span>
+						<p>
+							Наши специалисты проверят чертежи на 
+							соответствие поставленным задачам и 
+							начнут работу
+						</p>
+					</div>
+				</div>
+				<div class="steps-item">
+					<div class="steps-item_number">
+						<span>04</span>
+					</div>
+					<div class="steps-item_info">
+						<span>Старт работы</span>
+						<p>
+							Заключаем договор и выполняем работу
+							в железно установленные сроки
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="red title">
+		<div class="container">
+			<h3>
+				<span>НАШИ РЕАЛИЗОВАННЫЕ ПРОЕКТЫ - </span>МЫ ПОМОГАЕМ СВОИМ КЛИЕНТАМ ЭКОНОМИТЬ, ПРОИЗВОДЯ АНАЛОГИ
+				ЗАПЧАСТЕЙ, ДЕТАЛЕЙ И КОМПЛЕКТУЮЩИХ ПО ЛУЧШИМ ЦЕНАМ     	  
+			</h3>
+		</div>
+	</div>
+	<div class="info">
+		<div class="container">
+			<div class="info-block">
+				<div class="info-block__img">
+					<img src="img/info-img.png" alt="" />
+				</div>
+				<div class="info-block__text">
+					
+					<div class="info-block__item">
+						<p>
+							ИЗГОТАВЛИВАЕМ ЗАПЧАСТИ ДЛЯ СБОРКИ<br>
+							ВОЕННОЙ ТЕХНИКИ 
+						</p>
+					</div>
+					<div class="info-block__item">
+						<p>
+							ПОСТАВЛЯЕМ ЗАПЧАСТИ ДЛЯ ПРИЦЕПОВ<br>
+							И ПОЛУПРИЦЕПОВ ЧМЗАП
+						</p>
+					</div>
+					<div class="info-block__item">
+						<p>
+							ГОТОВИЛИ ЗАКЛАДНЫЕ ДЕТАЛИ ДЛЯ <br>
+							СТРОИТЕЛЬСТВА СЕВЕРНОГО ПОТОКА
+						</p>
+					</div>
+					<div class="info-block__item">
+						<p>
+							НАША ПРОДУКЦИЯ И УСЛУГИ СООТВЕТСТВУЮТ<br>
+							МЕЖДУНАРОДНЫМ СТАНДАРТАМ КАЧЕСТВА
+						</p>
+					</div>
+					<div class="info-block__item">
+						<p>
+							НАША ПРОДУКЦИЯ И УСЛУГИ СООТВЕТСТВУЮТ<br>
+							МЕЖДУНАРОДНЫМ СТАНДАРТАМ КАЧЕСТВА
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container" id="orders">
+			<h4 class="info-bootom">
+				<span class="red">Фотографии с производства </span>- за последние 3 года мы выполнили более 150  заказов<br> 
+				различной спецификации, опыт наших инженеров гарантирует качество выполнения <br>
+				работ и оперативность.
+			</h3>
+		</div>
+	</div>
+	<div class="about">
+		<div class="container">
+			<div class="about-blocks">
+				<div class="about-item">
+					<div class="about-blocks__img">
+						<img src="img/about-img.jpg" alt="about-img">
+					</div>
+					<div class="about-blocks__red"></div>
+				</div>
+				<div class="about-item">
+					<div class="about-blocks__img">
+						<img src="img/about-img.jpg" alt="about-img">
+					</div>
+					<div class="about-blocks__red"></div>
+				</div>
+				<div class="about-item">
+					<div class="about-blocks__img">
+						<img src="img/about-img.jpg" alt="about-img">
+					</div>
+					<div class="about-blocks__red"></div>
+				</div>
+				<div class="about-item">
+					<div class="about-blocks__img">
+						<img src="img/about-img.jpg" alt="about-img">
+					</div>
+					<div class="about-blocks__red"></div>
+				</div>
+			</div>
+			<div class="about-description">
+				<p>
+					Компания ЧЕЛДЕТАЛЬ  долгое время специализируется на обработке 
+					различных видов металлов. Заказать работы могут компании и частные 
+					лица. Для каждого вида обработки разработана четкая схема, поэтому 
+					созданы максимально комфортные условия для клиента. Мы постоянно 
+					совершенствуем производственные процессы и качество работы с 
+					заказчиками. Поэтому предоставляем услуги на высоком профессиональ-
+					ном уровне.
+				</p>
+			</div>
+			
+		</div>
+	</div>
+
+	<footer class="footer" id="contacts">
+		<div class="footer__form">
+			<div class="container">
+				<div class="footer__title">
+					<h2>Давайте обсудим вашу задачу</h2>
+					<h2>Свяжитесь с нами любым удобным способом</h2>
+				</div>
+				<div class="footer__wrapper">
+					<div class="footer__formblock">
+						<form  name="formfile" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'php/send.php')" class="form footer__forma">
+							<input type="hidden" name="user_type" value="Заявка с сайта c прикрепленным ТЗ или чертежем">
+							<input type="text" name="user_name" placeholder="Ваше имя" class="form__input" required>
+							<input type="tel" name="user_tel" placeholder="Ваш телефон" class="form__input" required>
+							<div class="form__textfile">
+								<img src="img/paperclip.svg" alt="paperclip">
+								<p>Прикрепить ТЗ или чертеж</p>
+							</div>
+							<input type="file"  name="myfile[]" multiple class="form__file" size="28">
+							<label for="user_confg" class="form__confg">
+								<input type="checkbox" name="user_confg" required>
+								Заполняя формы, Вы даете свое согласие  на обработку персональных данных,
+								согласно политике конфиденциальности
+							</label>
+							<button class="btn btn__red form__btn">Отправить данные</button>
+						</form>
+						<!-- Увидомление об отправки -->
+						<div class="form__message">
+							<div id="form__message"></div>
+						</div>
+					</div>
+					<div class="footer__contacts">
+						<div class="footer__contacts-title">Контакты</div>
+						<div class="footer__contacts-grup">
+							<div class="footer__contacts-link">
+								<img src="img/marker.svg" alt="marker">
+								<p>г. Челябинск, Свердловский тракт, 4Г</p>
+							</div>
+							<div class="footer__contacts-link">
+								<img src="img/phone.svg" alt="phone">
+								<a href="tel:89000874376">8 9000 874 376</a>
+							</div>
+							<div class="footer__contacts-link">
+								<img src="img/mail.svg" alt="mail">
+								<a href="mailto:reminaa@mail.ru">reminaa@mail.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__link">
+			<div class="container">
+				<div class="footer__info">
+					<div class="footer__info-grup">
+						<a href="#" class="footer__item">Изготовление деталей по чертежам заказчика</a>
+						<a href="#" class="footer__item">Токарные работы на станке чпу</a>
+						<a href="#" class="footer__item">Изготовление запчастей для прицепов и полуприцепов чмзап</a>
+					</div>
+					<div class="footer__info-grup">
+						<a href="#" class="footer__item">Изготовление стремянки рессоры по образцу заказчика</a>
+						<a href="#" class="footer__item">Токарные работы</a>
+						<a href="#" class="footer__item">Фрезерные работы</a>
+						<a href="#" class="footer__item">Термообработка</a>
+					</div>
+					<div class="footer__info-grup">
+						<a href="#" class="footer__item">Распил металла на ленточно - пильном станке</a>
+						<a href="#" class="footer__item">Изготовление сборных металлоконструкций</a>
+					</div>
+				</div>
+				<div class="footer__infobottom">
+					<img src="img/logo_white.svg" alt="logo">
+					<p>Челдеталь 2016-2020</p>
+				</div>
+			</div>
+		</div>
+
+			<div class="footer__map">
+				<div class="footer__map-script">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A694b082991353184b53048a8b5b1cdbb9144a73a6e9a36a355e7736bc868cfe0&amp;width=100%25&amp;height=460&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Всплывающии окна -->
+	<div class="popup">
+		<!-- Попапы по ID -->
+		<div class="popup__body" id="popup__offer">
+			<div class="popup__close">
+				<img src="img/close.svg" alt="close">
+			</div>
+			<div class="popup__content">
+				<form class="form popup__form" id="form__offer" name="form" enctype="multipart/form-data" method="post" onsubmit="sendWindow(event, 'php/mail.php')">
+					<div class="popup__title">Заявка на звонок</div>
+
+					<input type="hidden" name="user_type" value="Заявка на звонок">
+					<input type="text" name="user_name" id="user_name-offer" placeholder="Имя" class="form__input" required>
+					<input type="tel" name="user_tel" id="user_tel-offer" placeholder="Телефон" maxlength="12" class="form__input" required>
+					<button class="btn btn__red form__btn js__sub-offer">Отправить</button>
+					<p class="form__confg">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c политикой конфиденциальности</p>
+
+				</form>
+				<!-- Увидомление об отправки -->
+				<div class="popup__message message__offer">
+					<div class="popup__message-text" id="popup__message"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/jquery.validate.min.js"></script>
+	<script src="lib/slick/slick.min.js"></script>
+	<script src="scripts/common.js"></script>
 </body>
 </html>
